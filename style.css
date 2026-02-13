@@ -1,0 +1,139 @@
+:root {
+  --primary-orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 100%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  font-size: 15px;
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.card {
+  background: radial-gradient(circle at top, hsl(213, 19%, 22%), var(--dark-blue));
+  padding: 32px;
+  border-radius: 30px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Rating State Styles */
+.star-icon {
+  background-color: hsla(216, 12%, 54%, 0.1);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h1, h2 {
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+p {
+  color: var(--light-grey);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.rating-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.rating-group input[type="radio"] {
+  display: none;
+}
+
+.rating-group label {
+  width: 50px;
+  height: 50px;
+  background-color: hsla(216, 12%, 54%, 0.1);
+  color: var(--medium-grey);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+.rating-group label:hover {
+  background-color: var(--primary-orange);
+  color: var(--white);
+}
+
+.rating-group input[type="radio"]:checked + label {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--primary-orange);
+  color: var(--white);
+  letter-spacing: 2px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: var(--white);
+  color: var(--primary-orange);
+}
+
+/* Thank You State Styles */
+.thank-you {
+  text-align: center;
+}
+
+.thank-you-img {
+  margin: 10px 0 32px;
+}
+
+.result-badge {
+  background-color: hsla(216, 12%, 54%, 0.1);
+  color: var(--primary-orange);
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 32px;
+}
+
+.attribution {
+  margin-top: 20px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
